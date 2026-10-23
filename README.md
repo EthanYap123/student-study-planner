@@ -62,5 +62,5 @@ The app design, wireframes and usability research are by DEUI Group 1:
 
 - **Chloe** ([@Chloelzx25](https://github.com/Chloelzx25)): login and sign-up flow, home page, AI Lesson Companion
 - **Ying En** ([@yingearnn](https://github.com/yingearnn)): sitemap, AI Progress & Confidence System
-- **Brian**: AI Understanding Booster, usability test videos
+- **Brian** ([@brian1518](https://github.com/brian1518)): AI Understanding Booster, usability test videos
 - **Ethan** ([@EthanYap123](https://github.com/EthanYap123)): AI Practice & Feedback Engine, reports; built this coded prototype
