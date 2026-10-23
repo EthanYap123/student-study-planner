@@ -55,3 +55,12 @@ Then open http://localhost:8000.
 ## Context
 
 Built for ST0277 Design for User Interaction at Singapore Polytechnic (DIT, Year 1). The design follows our group's sitemap, wireframes and Figma prototype, and the recommendations from our CA3 usability test report.
+
+## Credits
+
+The app design, wireframes and usability research are by DEUI Group 1:
+
+- **Chloe** ([@Chloelzx25](https://github.com/Chloelzx25)): login and sign-up flow, home page, AI Lesson Companion
+- **Ying En** ([@yingearnn](https://github.com/yingearnn)): sitemap, AI Progress & Confidence System
+- **Brian**: AI Understanding Booster, usability test videos
+- **Ethan** ([@EthanYap123](https://github.com/EthanYap123)): AI Practice & Feedback Engine, reports; built this coded prototype
