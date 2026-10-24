@@ -58,6 +58,10 @@ Then open http://localhost:8000.
 
 Built for ST0277 Design for User Interaction at Singapore Polytechnic (DIT, Year 1). The design follows our group's sitemap, wireframes and Figma prototype, and the recommendations from our CA3 usability test report.
 
+## What I learned
+
+- Turning Figma screens into a working app showed me where our designs had gaps, such as empty states and error messages.
+
 ## Credits
 
 The app design, wireframes and usability research are by DEUI Group 1:
