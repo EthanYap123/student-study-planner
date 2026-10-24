@@ -61,6 +61,7 @@ Built for ST0277 Design for User Interaction at Singapore Polytechnic (DIT, Year
 ## What I learned
 
 - Turning Figma screens into a working app showed me where our designs had gaps, such as empty states and error messages.
+- Usability testing changed real decisions. Testers felt lost in the middle of a quiz, so we added a progress and time indicator plus flag and skip. Watching real users struggle taught me more than reviewing the design ourselves.
 
 ## Credits
 
