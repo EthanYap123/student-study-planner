@@ -4,6 +4,8 @@ An interactive, mobile-first prototype of **MyLearningAI**, an AI-assisted learn
 
 **Live demo:** https://ethanyap123.github.io/student-study-planner/
 
+![MyLearningAI app screens](docs/app-screens.jpg)
+
 On a desktop the app runs inside a phone frame; on a phone it fills the screen. Everything runs in the browser with mock data, so no account or server is needed. Sign up or log in with any details.
 
 ## Features
