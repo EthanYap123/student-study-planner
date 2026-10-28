@@ -125,6 +125,8 @@ Although MyLearningAI is currently a browser-based prototype, there are several 
 
 - **Cross-device synchronization:** Allow users to access their study plans, quiz results and revision materials across multiple devices.
 
+- **Collaborative Revision:** Shared revision sheets and peer-to-peer flashcard challenges.
+
 ## Credits
 
 The app design, wireframes and usability research are by **DEUI Group 1**:
