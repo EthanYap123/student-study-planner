@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Validate HTML, JavaScript and links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Plain HTML, CSS and JavaScript: there is no build step and no test suite,
+      # so CI checks that every page is valid, every script parses and every
+      # local link or asset exists.
+      - name: Validate HTML
+        run: npx --yes html-validate@9.7.1 --preset standard index.html
+
+      - name: Check JavaScript syntax
+        run: for f in js/*.js; do node --check "$f"; done
+
+      - name: Check local links and assets
+        run: node .github/scripts/check-local-refs.mjs index.html
