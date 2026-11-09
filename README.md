@@ -4,6 +4,8 @@ An interactive, mobile-first prototype of **MyLearningAI**, an AI-assisted learn
 
 **Live demo:** https://ethanyap123.github.io/student-study-planner/
 
+[![CI](https://github.com/EthanYap123/student-study-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/EthanYap123/student-study-planner/actions/workflows/ci.yml)
+
 ![MyLearningAI app screens](docs/app-screens.jpg)
 
 On a desktop, the app runs inside a phone frame; on a phone, it fills the screen. Everything runs in the browser with mock data, so no account or server is needed. Sign up or log in with any details.
@@ -31,7 +33,7 @@ On a desktop, the app runs inside a phone frame; on a phone, it fills the screen
 
 Progress (quiz history, plans, sheets, streaks and settings) is saved in the browser's local storage. Use **Settings → Privacy & Security → Clear my data** or **Reset demo data** on desktop to start over.
 
-## Tech
+## Tech stack
 
 Plain HTML, CSS and vanilla JavaScript with no build step and no dependencies. It uses a hash router and is hosted on GitHub Pages.
 
@@ -47,7 +49,11 @@ js/screens-practice.js  Practice & Feedback Engine
 js/screens-learn.js     Lesson Companion and Understanding Booster
 ```
 
-## Run Locally
+## Architecture
+
+A single-page app with no server. `index.html` loads the scripts in order: `app.js` keeps the app state and a hash router, each `screens-*.js` file registers the screens for one part of the app, and `data.js` holds the mock data and the maths question generators. Progress is saved in `localStorage`, so it survives a refresh.
+
+## Getting started
 
 1. Clone or download this repository.
 2. Open the project folder in your terminal.
@@ -61,6 +67,12 @@ python -m http.server 8000
 
 No additional packages or dependencies are required.
 
+## Testing and CI
+
+There is no automated test suite yet. The prototype was tested by hand and through our group's usability testing (see [Context](#context)).
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every push to `main` and every pull request. It validates the HTML with html-validate, checks every script parses with `node --check`, and fails if a page links to a local file that doesn't exist. GitHub Pages deploys the site from `main`.
+
 ## Context
 
 Built for ST0277 Design for User Interaction at Singapore Polytechnic (DIT, Year 1).
@@ -70,22 +82,6 @@ The design follows our group's sitemap, wireframes and Figma prototype, and the 
 The objective of this project was to explore how AI-assisted features could support students in planning their studies, understanding difficult concepts, practising questions and tracking their learning progress.
 
 This coded prototype demonstrates how our original designs and usability findings can be translated into an interactive web application.
-
-## What I Learned
-
-- **Turning designs into code:** Translating our Figma wireframes into a functional web application helped me understand how UI/UX design decisions affect actual implementation. I also learned to handle missing design details, such as empty states, error messages and user feedback.
-
-- **Improving user experience through testing:** Usability testing showed us areas where users struggled, particularly during quizzes. Based on their feedback, we introduced progress indicators, time tracking, and flag and skip options to improve navigation and usability.
-
-- **Strengthening JavaScript skills:** Building interactive features helped me improve my understanding of JavaScript, DOM manipulation, event handling, and managing application state.
-
-- **Managing data without a backend:** Using local storage taught me how to persist user progress, quiz results, study plans and preferences across browser sessions.
-
-- **Building responsive interfaces:** Developing a mobile-first application taught me how to adapt layouts for different screen sizes while maintaining a consistent user experience.
-
-- **Problem-solving and debugging:** Integrating multiple features into one application helped me develop better debugging skills and understand the importance of organizing code into reusable components.
-
-- **Understanding the development process:** This project showed me how user research, wireframing, prototyping, usability testing and implementation work together to create a more user-friendly product.
 
 ## Challenges Faced
 
@@ -109,7 +105,7 @@ Feedback from our usability testing highlighted problems that were not obvious d
 
 Ensuring the interface worked properly on both mobile devices and desktop browsers required adjustments to layouts, spacing and component sizing.
 
-## Future Improvements
+## What I'd improve next
 
 Although MyLearningAI is currently a browser-based prototype, there are several opportunities for further development:
 
@@ -126,6 +122,22 @@ Although MyLearningAI is currently a browser-based prototype, there are several 
 - **Cross-device synchronization:** Allow users to access their study plans, quiz results and revision materials across multiple devices.
 
 - **Collaborative Revision:** Shared revision sheets and peer-to-peer flashcard challenges.
+
+## What I learned
+
+- **Turning designs into code:** Translating our Figma wireframes into a functional web application helped me understand how UI/UX design decisions affect actual implementation. I also learned to handle missing design details, such as empty states, error messages and user feedback.
+
+- **Improving user experience through testing:** Usability testing showed us areas where users struggled, particularly during quizzes. Based on their feedback, we introduced progress indicators, time tracking, and flag and skip options to improve navigation and usability.
+
+- **Strengthening JavaScript skills:** Building interactive features helped me improve my understanding of JavaScript, DOM manipulation, event handling, and managing application state.
+
+- **Managing data without a backend:** Using local storage taught me how to persist user progress, quiz results, study plans and preferences across browser sessions.
+
+- **Building responsive interfaces:** Developing a mobile-first application taught me how to adapt layouts for different screen sizes while maintaining a consistent user experience.
+
+- **Problem-solving and debugging:** Integrating multiple features into one application helped me develop better debugging skills and understand the importance of organizing code into reusable components.
+
+- **Understanding the development process:** This project showed me how user research, wireframing, prototyping, usability testing and implementation work together to create a more user-friendly product.
 
 ## Credits
 
